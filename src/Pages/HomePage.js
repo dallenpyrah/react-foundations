@@ -1,5 +1,6 @@
 import React from 'react'
 import LogoComponent from '../Components/LogoComponent'
+import NumberComponent from '../Components/NumberComponent'
 
 class HomePage extends React.Component{
     render(){
@@ -7,6 +8,7 @@ class HomePage extends React.Component{
             <div className="row">
                 <div className="ml-4 mt-3">
                     <LogoComponent />
+                    <NumberComponent name="Dallen Pyrah" />
                 </div>
             </div>
             <div className="row mt-5 justify-content-around">
