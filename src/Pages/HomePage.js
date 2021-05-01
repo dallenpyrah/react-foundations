@@ -2,6 +2,8 @@ import React from 'react'
 import { AppSate } from '../AppState'
 import LogoComponent from '../Components/LogoComponent'
 import NumberComponent from '../Components/NumberComponent'
+import { Link } from 'react-router-dom'
+import 'react-router-dom'
 
 class HomePage extends React.Component{
 
@@ -31,9 +33,11 @@ class HomePage extends React.Component{
                 </div>
             </div>
             <div className="col-3">
+                <Link to="/logo">
             <div className="card bg-secondary text-light shadow-lg">
                     <h2>About Us</h2>
                 </div>
+                </Link>
             </div>
             <div className="col-3 mt-5 ">
                 <div className="card bg-danger text-light shadow-lg">
