@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { AppSate } from '../AppState'
 
 class NumberComponent extends PureComponent {
     static propTypes = {}
@@ -8,7 +9,8 @@ class NumberComponent extends PureComponent {
         super(props)
 
         this.state = {
-            count: 0
+            count: AppSate.count,
+            brandName: AppSate.brandName
         }
     }
 
@@ -16,11 +18,17 @@ class NumberComponent extends PureComponent {
         this.setState({ count: this.state.count + 10})
     }
 
+    updateCountTwo = () => {
+        this.setState({ count: this.state.count + 15})
+    }
+
+
     render() {
         const count = this.state.count;
         return (
             <div>
-                <h3 onClick={this.updateCount}>{this.props.name}{count}</h3>
+                <h3 onClick={this.updateCount}>{this.state.brandName}{count}</h3>
+                <h3 onClick={this.updateCountTwo}>{this.state.brandName}{count}</h3>
             </div>
         )
     }
