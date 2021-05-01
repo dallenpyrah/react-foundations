@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { AppSate } from '../AppState'
-
+import '../App.css';
 class NumberComponent extends PureComponent {
     static propTypes = {}
 
@@ -28,7 +28,7 @@ class NumberComponent extends PureComponent {
         return (
             <div>
                 <h3 onClick={this.updateCount}>{this.state.brandName}{count}</h3>
-                <h3 onClick={this.updateCountTwo}>{this.state.brandName}{count}</h3>
+                <h3 onClick={this.updateCountTwo}>{this.state.brandName}{this.props.boards}{count}</h3>
             </div>
         )
     }

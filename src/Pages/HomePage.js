@@ -1,14 +1,26 @@
 import React from 'react'
+import { AppSate } from '../AppState'
 import LogoComponent from '../Components/LogoComponent'
 import NumberComponent from '../Components/NumberComponent'
 
 class HomePage extends React.Component{
+
+    static propTypes = {}
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            boards: AppSate.boards
+        }
+    }
     render(){
+        // const boards = this.state.boards;
         return <div className="container-fluid">
             <div className="row">
                 <div className="ml-4 mt-3">
                     <LogoComponent />
-                    <NumberComponent name="Dallen Pyrah" />
+                    <NumberComponent boards={this.state.boards.title}/>
                 </div>
             </div>
             <div className="row mt-5 justify-content-around">
