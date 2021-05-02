@@ -7,22 +7,21 @@ class NumberComponent extends PureComponent {
 
     constructor(props) {
         super(props)
-
+        
         this.state = {
             count: AppSate.count,
             brandName: AppSate.brandName
         }
     }
-
+    
     updateCount = () => {
         this.setState({ count: this.state.count + 10})
     }
-
+    
     updateCountTwo = () => {
         this.setState({ count: this.state.count + 15})
     }
-
-
+    
     render() {
         const count = this.state.count;
         return (

@@ -28,7 +28,7 @@ class HomePage extends React.Component{
             <div className="row mt-5 justify-content-around">
             <div className="col-3 mt-5">
                 <div className="card bg-danger text-light shadow-lg">
-                    <h2>Our services</h2>
+                    <h2>Our services</h2> 
                     <p>On time calender notifications in order to make sure you're always on time.</p>
                 </div>
             </div>
